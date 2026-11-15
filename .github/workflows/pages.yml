@@ -29,6 +29,9 @@ jobs:
         with:
           node-version: 22
 
+      - name: Setup npm
+        run: npm install --global npm@11.19.0 --ignore-scripts --no-audit --no-fund
+
       - name: Install dependencies
         run: |
           if [ -f package-lock.json ]; then
